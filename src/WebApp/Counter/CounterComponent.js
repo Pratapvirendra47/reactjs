@@ -10,23 +10,23 @@ class CounterComponent extends React.Component {
     }
 
     incrementValue = () => {
-        this.setState({
-            countValue : this.state.countValue + 1
-        })
+        this.setState({countValue : this.state.countValue + 1})
+        // console.log("seeing the state value", this.state.countValue);
     }
 
     incrementCounterFiveTimes = () => {
         this.incrementValue();
-        this.incrementValue();
-        this.incrementValue();
-        this.incrementValue();
-        this.incrementValue();
+        // this.incrementValue();
+        // this.incrementValue();
+        // this.incrementValue();
+        // this.incrementValue();
     }
 
     render() {
-        console.log("seeing the counter values", this.state.countValue);
         return (
-            <div style={{textAlign : "center"}}>
+            <div style={{
+                textAlign : "center"
+            }}>
                 <div>
                     {this.state.countValue}
                 </div>

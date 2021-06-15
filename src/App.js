@@ -5,6 +5,8 @@ import Header from './WebApp/headerComponent/Header.js';
 import Body from './WebApp/Body/bodyComponent.js';
 import Car from './WebApp/Car/CarComponent.js';
 import CounterComponent from './WebApp/Counter/CounterComponent.js';
+import ConditionalRendering from './WebApp/ConditionalRender/CondRendering.js';
+import CarClassComponent from './WebApp/Car/CarClassComp.js';
 
 
 // Class Based Component
@@ -23,22 +25,38 @@ class App extends React.Component {
       counter : 0
     } 
   }
+
+  updateTire = () => {
+    this.setState({
+      tires : "10"
+    })
+  }
+
   render() {
     return (
       // JSX format
       <div>
         {/* <Header />
         <Body />
-        {this.state.message}
+        {this.state.message} */}
 
-        <Car
+        {/* <Car
           tires={this.state.tires}
           door={this.state.door}
           color={this.state.color}
           name={this.state.name}
         /> */}
 
-        <CounterComponent />
+        <CarClassComponent 
+          tires={this.state.tires}
+          door={this.state.door}
+          color={this.state.color}
+          name={this.state.name}
+          updatingTire={this.updateTire}
+        />
+
+        {/* <CounterComponent />
+        <ConditionalRendering /> */}
       
         
 
